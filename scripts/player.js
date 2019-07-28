@@ -49,7 +49,7 @@ class Player {
   }
 
   prettyTime (timeInSeconds) {
-    const totalSeconds = player.getDuration();
+    const totalSeconds = player.getDuration() || player.getTime();
     let minutes = (Math.floor(totalSeconds / 60));
     let seconds = (Math.floor(totalSeconds % 60));
     return minutes + ":" + seconds;
